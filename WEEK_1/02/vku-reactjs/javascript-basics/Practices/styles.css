@@ -1,0 +1,473 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+h1 {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Task Sections */
+.task {
+    padding: 30px;
+    border-bottom: 2px solid #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+.task:hover {
+    background-color: #f9f9f9;
+}
+
+.task h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+   
+    padding-left: 15px;
+}
+
+.practice-project h2 {
+    color: #764ba2;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    text-align: center;
+    border: 2px solid #764ba2;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+main-content
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    margin: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.2);
+}
+
+input.error {
+    border-color: #e74c3c;
+    background-color: #ffeaea;
+}
+
+/* Task 2: Box for highlighting */
+.box {
+    width: 200px;
+    height: 100px;
+    background: #f0f0f0;
+    border: 2px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.box.highlight {
+    background: #ffeb3b;
+    border-color: #fbc02d;
+    transform: scale(1.05);
+}
+
+/* Task 3 & 4: Lists */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f8f9fa;
+    margin: 8px 0;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.deleteBtn {
+    background: #e74c3c;
+    padding: 8px 16px;
+    font-size: 12px;
+}
+
+.deleteBtn:hover {
+    background: #c0392b;
+}
+
+/* Task 5: Image */
+#mainImage {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#mainImage:hover {
+    transform: scale(1.05);
+}
+
+/* Task 8: Hover Box */
+.hoverBox {
+    width: 250px;
+    height: 100px;
+    background: #f0f0f0;
+    border: 2px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Task 9: Clock */
+#clockDisplay {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #667eea;
+    text-align: center;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #667eea;
+    font-family: 'Courier New', monospace;
+}
+
+/* Error Messages */
+.error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Task 15: Textarea */
+#bioInput {
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+}
+
+#charCount {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Task 16: Box Container */
+#boxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    min-height: 100px;
+    border: 2px dashed #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.colored-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.colored-box:hover {
+    transform: scale(1.1);
+}
+
+/* Task 17: Strike through */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+    background: #e9ecef !important;
+}
+
+#todoList li {
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/* Calculator Styles */
+.calculator {
+    max-width: 350px;
+    margin: 20px auto;
+    background: #333;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.display {
+    background: #000;
+    color: #fff;
+    font-size: 2rem;
+    padding: 20px;
+    text-align: right;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: 'Courier New', monospace;
+    word-break: break-all;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn.number {
+    background: #666;
+    color: white;
+}
+
+.btn.operator {
+    background: #ff9500;
+    color: white;
+}
+
+.btn.equals {
+    background: #ff9500;
+    color: white;
+    grid-row: span 2;
+}
+
+.btn.clear {
+    background: #a6a6a6;
+    color: black;
+}
+
+.btn.zero {
+    grid-column: span 2;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    transform: scale(0.98);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Registration Form Styles */
+.registration-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 8px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+.char-counter {
+    color: #666;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.submit-btn {
+    width: 100%;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 10px;
+    }
+    
+    .task {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        padding: 20px;
+    }
+    
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+    }
+    
+    .btn {
+        height: 50px;
+        font-size: 1rem;
+    }
+    
+    .thumbnails {
+        justify-content: center;
+    }
+    
+    .radio-group,
+    .checkbox-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

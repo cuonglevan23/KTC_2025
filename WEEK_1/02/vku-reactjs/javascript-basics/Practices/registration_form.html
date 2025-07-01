@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a User Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+          <div class="main-content">
+
+            <form id="registrationForm" class="registration-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <span class="error-message" id="fullNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <span class="error-message" id="confirmPasswordError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender *</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                        <label><input type="radio" name="gender" value="other"> Other</label>
+                    </div>
+                    <span class="error-message" id="genderError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth *</label>
+                    <input type="date" id="dob" name="dob" required>
+                    <span class="error-message" id="dobError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country *</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select Country</option>
+                        <option value="vietnam">Vietnam</option>
+                        <option value="usa">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="canada">Canada</option>
+                        <option value="australia">Australia</option>
+                    </select>
+                    <span class="error-message" id="countryError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Hobbies *</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="hobbies" value="reading"> Reading</label>
+                        <label><input type="checkbox" name="hobbies" value="sports"> Sports</label>
+                        <label><input type="checkbox" name="hobbies" value="music"> Music</label>
+                        <label><input type="checkbox" name="hobbies" value="travel"> Travel</label>
+                        <label><input type="checkbox" name="hobbies" value="cooking"> Cooking</label>
+                    </div>
+                    <span class="error-message" id="hobbiesError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="profilePicture">Profile Picture</label>
+                    <input type="file" id="profilePicture" name="profilePicture" accept=".jpg,.jpeg,.png">
+                    <span class="error-message" id="profilePictureError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Bio / About You</label>
+                    <textarea id="bio" name="bio" maxlength="300" placeholder="Tell us about yourself..."></textarea>
+                    <span class="char-counter" id="bioCounter">0/300 characters</span>
+                </div>
+
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+
+
+    </div>
+
+    <script src="registration_form.js"></script>
+</body>
+</html>

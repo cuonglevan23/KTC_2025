@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive To-Do & Notes Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <h1>📋 Dashboard</h1>
+                <div class="header-controls">
+                    <div class="clock-section">
+                        <div id="clock" class="clock">00:00:00</div>
+                        <div id="greeting" class="greeting">Good day!</div>
+                    </div>
+                    <button id="themeToggle" class="theme-toggle" title="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- To-Do Section -->
+            <section class="todo-section">
+                <div class="section-header">
+                    <h2>✅ To-Do List</h2>
+                </div>
+                
+                <div class="todo-input-section">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="todoInput" 
+                            placeholder="Add a new task..." 
+                            maxlength="100"
+                        >
+                        <button id="addTodoBtn" class="btn btn-primary">Add Task</button>
+                    </div>
+                    <div id="todoError" class="error-message"></div>
+                </div>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Show All</button>
+                    <button class="filter-btn" data-filter="completed">Show Completed</button>
+                    <button class="filter-btn" data-filter="incomplete">Show Incomplete</button>
+                </div>
+
+                <div class="todo-stats">
+                    <span id="totalTasks">0</span> total tasks, 
+                    <span id="completedTasks">0</span> completed
+                </div>
+
+                <ul id="todoList" class="todo-list"></ul>
+            </section>
+
+            <!-- Notes Section -->
+            <section class="notes-section">
+                <div class="section-header">
+                    <h2>📝 Sticky Notes</h2>
+                </div>
+                
+                <div class="notes-input-section">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="noteInput" 
+                            placeholder="Add a new note..." 
+                            maxlength="150"
+                        >
+                        <button id="addNoteBtn" class="btn btn-secondary">Add Note</button>
+                    </div>
+                    <div id="noteError" class="error-message"></div>
+                </div>
+
+                <div class="notes-container" id="notesContainer">
+                    <!-- Notes will be dynamically added here -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Interactive Dashboard - Built with Vanilla JavaScript</p>
+        </footer>
+    </div>
+
+    <!-- Edit Modal (for bonus features) -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Edit Item</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="editInput" placeholder="Edit text...">
+            </div>
+            <div class="modal-footer">
+                <button id="saveEdit" class="btn btn-primary">Save</button>
+                <button id="cancelEdit" class="btn btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

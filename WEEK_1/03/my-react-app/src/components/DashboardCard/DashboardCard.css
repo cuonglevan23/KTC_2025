@@ -1,0 +1,155 @@
+.dashboard-card {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.status-tabs {
+  display: flex;
+  gap: 16px;
+}
+
+.status-tab {
+  font-size: 12px;
+  font-weight: 500;
+  color: #999;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+
+.status-tab.active {
+  color: #27ae60;
+  position: relative;
+}
+
+.status-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #27ae60;
+  border-radius: 1px;
+}
+
+.dashboard-card.feeds .status-tab.active {
+  color: #e74c3c;
+}
+
+.dashboard-card.feeds .status-tab.active::after {
+  background: #e74c3c;
+}
+
+.dashboard-more-btn {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.dashboard-more-btn:hover {
+  background: #f5f5f5;
+  color: #666;
+}
+
+.dashboard-content {
+  text-align: left;
+}
+
+.dashboard-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+.dashboard-subtitle {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+  margin: 0 0 16px 0;
+}
+
+.progress-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #27ae60 0%, #2ecc71 100%);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.progress-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  min-width: 40px;
+  text-align: right;
+}
+
+.dashboard-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 12px;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .dashboard-card {
+    padding: 14px;
+    border-radius: 12px;
+  }
+  
+  .dashboard-title {
+    font-size: 16px;
+  }
+  
+  .dashboard-subtitle {
+    font-size: 13px;
+  }
+  
+  .progress-section {
+    gap: 8px;
+  }
+  
+  .progress-value {
+    font-size: 13px;
+    min-width: 35px;
+  }
+}

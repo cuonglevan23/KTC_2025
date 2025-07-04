@@ -3,11 +3,12 @@ import LikeButton from './LikeButton';
 import Rating from './Rating';
 import SlideWithThumb from './SlideWithThumb';
 import ButtonTabs from './ButtonTabs';
+import ButtonAccordions from './ButtonAccordions';
 
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto p-8">
+      <div className="max-w-6xl mx-auto p-8">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
@@ -21,6 +22,7 @@ const HomePage = () => {
           <Rating />
           <SlideWithThumb />
           <ButtonTabs />
+          <ButtonAccordions />
         </div>
       </div>
     </div>

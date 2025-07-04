@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 const SlideWithThumb = () => {
   const images = [
-    'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop',
+      'https://images.unsplash.com/photo-1545454675-3531b543be5d?w=400&h=300&fit=crop',
     'https://images.unsplash.com/photo-1545454675-3531b543be5d?w=400&h=300&fit=crop',
-    'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&h=300&fit=crop',
     'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&h=300&fit=crop',
     'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop'
   ];

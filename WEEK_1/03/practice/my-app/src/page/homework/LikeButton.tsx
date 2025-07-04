@@ -10,17 +10,23 @@ const LikeButton = () => {
   return (
     <div className="mb-8">
       <h2 className="text-xl font-semibold mb-4">LikeButton</h2>
-      <button
-        onClick={handleLike}
-        className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
-          isLiked 
-            ? 'bg-blue-500 text-white' 
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-        }`}
-      >
-        <span className="text-lg">👍</span>
-        <span>{isLiked ? 'Thank you !' : 'Like'}</span>
-      </button>
+      
+      <div className="flex items-center space-x-3">
+        <button
+          onClick={handleLike}
+          className={`flex items-center justify-center w-10 h-10 rounded-full transition-colors ${
+            isLiked 
+              ? 'bg-blue-500 text-white' 
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+          }`}
+        >
+          <span className="text-lg">👍</span>
+        </button>
+        
+        <span className="text-gray-700 select-none">
+          {isLiked ? 'Thank you !' : 'Click like if this post is useful to you !'}
+        </span>
+      </div>
     </div>
   );
 };

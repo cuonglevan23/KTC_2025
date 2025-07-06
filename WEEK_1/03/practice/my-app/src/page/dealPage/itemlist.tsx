@@ -15,10 +15,9 @@ interface INewItemData {
 
 interface ItemListProps {
   data: INewItemData[];
-  onRatingChange?: (itemId: number, newRating: number) => void;
 }
 
-const ItemList = ({ data, onRatingChange }: ItemListProps) => {
+const ItemList = ({ data }: ItemListProps) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
       {data.map((item, index) => (
